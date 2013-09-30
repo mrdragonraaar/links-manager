@@ -1,0 +1,58 @@
+<?php
+/**
+ * English Language File for Links Manager Plugin
+ *
+ * (c)2013 mrdragonraaar.com
+ */
+
+$i18n = array(
+	"LM_TITLE"=> "Links Manager",
+	"LM_DESC" => "Manage a collection of links and link categories",
+	"LM_CAT_TITLE" => "Links Manager: Categories",
+	"LINK" => "Link",
+	"LINKS" => "Links",
+	"MANAGE_LINKS" => "Manage Links",
+	"CATEGORIES" => "Categories",
+	"MANAGE_CATEGORIES" => "Manage Categories",
+	"NEW_LINK" => "Add New Link",
+	"NEW_CATEGORY" => "Add New Category",
+	"EDIT_LINK" => "Edit Link",
+	"EDIT_CATEGORY" => "Edit Category",
+	"DELETE_LINK" => "Delete Link",
+	"DELETE_CATEGORY" => "Delete Category",
+	"NO_LINKS" => "No links have been defined yet. You can add links by clicking on the <i>\"Add New Link\"</i> button in the top right corner of this screen.",
+	"NO_CATEGORIES" => "No categories have been defined yet. You can add categories by clicking on the <i>\"Add New Category\"</i> button in the top right corner of this screen.",
+	"CHANGE_ORDER" => "Change the order of the links below using drag &amp; drop. You can save your changes by clicking on the <i>\"Save Order\"</i> button at the bottom of this screen.",
+	"ID" => "ID",
+	"NAME" => "Name",
+	"URL" => "URL",
+	"INTERNAL_PAGE" => "Internal Page",
+	"TARGET" => "Target",
+	"DESCRIPTION" => "Description",
+	"CATEGORY"=> "Category",
+	"ICON_URL" => "Icon URL",
+	"ICON" => "Icon",
+	"DISPLAY" => "Link Display Options",
+	"ICON_AND_TEXT" => "Icon and Text",
+	"ICON_ONLY" => "Icon Only",
+	"TEXT_ONLY" => "Text Only",
+	"SHOW_DESC" => "Show Description",
+	"YES" => "Yes",
+	"NO" => "No",
+	"VIEW_LINK" => "View Link",
+	"VIEW_PAGE" => "View Page",
+	"NO_LINK" => "No Link",
+	"SAVE_ORDER" => "Save Order",
+	"SAVE_LINK" => "Save Link",
+	"SAVE_CATEGORY" => "Save Category",
+	"CANCEL" => "Cancel",
+	"DELETE" => "Delete",
+	"OR" => "or",
+	"SUCCESS_SAVE" => "Your %s have been saved.",
+	"SUCCESS_RESTORE" => "Your %s have been restored.",
+	"SUCCESS_DELETE" => "Delete was successful.",
+	"ERROR_SAVE" => "<b>Error:</b> Unable to save %s.",
+	"ERROR_RESTORE" => "<b>Error:</b> Unable to restore %s.",
+	"ERROR_DELETE" => "<b>Error:</b> Unable to delete.",
+);
+?>

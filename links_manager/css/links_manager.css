@@ -1,0 +1,134 @@
+/**
+ * links_manager.css
+ *
+ * (c)2013 mrdragonraaar.com
+ */
+
+/* Admin: Links */
+table#links th:nth-last-of-type(2),
+table#links td:nth-last-of-type(2)
+{
+	text-align: center;
+}
+
+form textarea#link-desc
+{
+	width: 510px;
+	height: 90px;
+}
+
+tr.placeholder-link
+{
+	height: 30px;
+	background: #ffb164;
+}
+
+#links tbody.ui-state-default tr td
+{
+	color: #fff;
+	background: #000;
+}
+
+/* Admin: Categories */
+table#categories th:first-of-type,
+table#categories td:first-of-type
+{
+	width: 30px;
+}
+
+/* Validation */
+.invalid
+{
+	color: #D94136;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+/* Notifications */
+.notify_ok
+{
+	background-image: url('../img/tick-circle-frame.png');
+	background-repeat: no-repeat;
+	background-position: 7px;
+	padding-left: 28px;
+	background-color: #f0ffed;
+	background-color: -moz-linear-gradient(top,#f0ffed 0%, #dfffd7 100%);
+	background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0ffed), color-stop(100%,#dfffd7));
+	background-color: -webkit-linear-gradient(top,#f0ffed 0%,#dfffd7 100%);
+	background-color: -o-linear-gradient(top,#f0ffed 0%,#dfffd7 100%);
+	background-color: -ms-linear-gradient(top,#f0ffed 0%,#dfffd7 100%);
+	background-color: linear-gradient(to bottom,#f0ffed 0%,#dfffd7 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f0ffed', endColorstr='#dfffd7',GradientType=0 );
+}
+
+/*
+.notify_ok a:link
+{
+	color: #258815;
+}
+*/
+
+.notify_warning
+{
+	background-image: url('../img/exclamation-circle-frame.png');
+	background-repeat: no-repeat;
+	background-position: 7px;
+	padding-left: 28px;
+	background-color: #fffed5;
+	background-color: -moz-linear-gradient(top,#fffed5 0%, #fffdbf 100%);
+	background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffed5), color-stop(100%,#fffdbf));
+	background-color: -webkit-linear-gradient(top,#fffed5 0%,#fffdbf 100%);
+	background-color: -o-linear-gradient(top,#fffed5 0%,#fffdbf 100%);
+	background-color: -ms-linear-gradient(top,#fffed5 0%,#fffdbf 100%);
+	background-color: linear-gradient(to bottom,#fffed5 0%,#fffdbf 100%);filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fffed5', endColorstr='#fffdbf',GradientType=0 );
+}
+
+/*
+.notify_warning a:link
+{
+	color: #878314;
+}
+*/
+
+.notify_info
+{
+	background-image: url('../img/information-frame.png');
+	background-repeat: no-repeat;
+	background-position: 7px;
+	padding-left: 28px;
+	background-color: #edf4ff;
+	background-color: -moz-linear-gradient(top,#edf4ff 0%, #d7e7ff 100%);
+	background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edf4ff), color-stop(100%,#d7e7ff));
+	background-color: -webkit-linear-gradient(top,#edf4ff 0%,#d7e7ff 100%);
+	background-color: -o-linear-gradient(top,#edf4ff 0%,#d7e7ff 100%);
+	background-color: -ms-linear-gradient(top,#edf4ff 0%,#d7e7ff 100%);
+	background-color: linear-gradient(to bottom,#edf4ff 0%,#d7e7ff 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#edf4ff', endColorstr='#d7e7ff',GradientType=0 );
+}
+
+/*
+.notify_info a:link
+{
+	color: #2850C1;
+}
+*/
+
+.notify_error
+{
+	background-image: url('../img/cross-circle-frame.png');
+	background-repeat: no-repeat;
+	background-position: 7px;
+	padding-left: 28px;
+	background-color: #F9DFDD;
+	background-color: -moz-linear-gradient(top, #FCF0EF 0%, #F9DFDD 100%);
+	background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FCF0EF), color-stop(100%,#F9DFDD));
+}
+
+/*
+.notify_error a:link
+{
+	color: #990000;
+}
+*/
+
+

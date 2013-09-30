@@ -1,0 +1,54 @@
+/**
+ * links_manager_links.css
+ *
+ * (c)2012 mrdragonraaar.com
+ */
+
+/**
+ * Tested with Innovation theme.
+ * Put <div class="linksmanager">...</div> around php call or template tag.
+ * For icon only links use <div class="linksmanager icons"> to put on single
+ * line.
+ */
+
+/* remove list bullets */
+.linksmanager ul,
+aside .linksmanager ul
+{
+	margin: 0 0 15px 0;
+	list-style-type: none;
+}
+
+/* put icon only links on single line */
+.linksmanager.icons li,
+aside .linksmanager.icons li
+{
+	display: inline;
+}
+
+/* set line-height to accomodate 16px icon */
+.linksmanager ul li a.lm-link,
+.linksmanager ul li span.lm-link,
+aside .linksmanager ul li a.lm-link,
+aside .linksmanager ul li span.lm-link
+{
+	line-height: 20px;
+}
+
+/* vertically align icon in middle of text. */
+/* put space between text and icon */
+.linksmanager ul li img,
+aside .linksmanager ul li img
+{
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+/* display description on next line and align with label */
+.linksmanager ul li span.lm-link-desc,
+aside .linksmanager ul li span.lm-link-desc
+{
+	display: block;
+	margin-left: 19px;
+}
+
