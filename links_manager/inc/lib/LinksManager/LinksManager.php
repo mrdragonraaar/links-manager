@@ -6,6 +6,12 @@
  */
 if (!defined('IN_GS')) { die('you cannot load this page directly.'); }
 
+// instructions admin panel
+if (!defined('LM_INSTRUCTIONS_TEMPLATE')) {
+define('LM_INSTRUCTIONS_TEMPLATE', LM_TEMPLATE_PATH . 
+   'instructions_panel.php');
+}
+
 /**
  * Define LinksManager abstract class.
  *
@@ -331,6 +337,52 @@ abstract class LinksManager implements ILinksManager
 	public function do_undo()
 	{
 		return $this->restore() && $this->load();
+	}
+
+	/**
+	 * Check if current url is instructions url.
+	 * @return true if instructions url
+	 */
+	static public function is_instructions_url()
+	{
+		return isset($_GET['instructions']);
+	}
+
+	/**
+	 * Get instructions url.
+	 * @return instructions url
+	 */
+	static public function instructions_url()
+	{
+		return LM_PLUGIN_URL . '&amp;instructions';
+	}
+
+	/**
+	 * Display instructions panel.
+	 */
+	static public function instructions_panel()
+	{
+		echo self::return_instructions_panel();
+	}
+
+	/**
+	 * Get instructions panel.
+	 * @return instructions panel html
+	 */
+	static public function return_instructions_panel()
+	{
+		ob_start();
+		include(self::instructions_panel_template());
+		return ob_get_clean();
+	}
+
+	/**
+	 * Get instructions admin panel template.
+	 * @return instructions admin panel template
+	 */
+	static public function instructions_panel_template()
+	{
+		return LM_INSTRUCTIONS_TEMPLATE;
 	}
 
 	/**

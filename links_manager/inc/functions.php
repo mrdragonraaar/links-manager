@@ -76,6 +76,9 @@ function lm_main()
 			$lm_categories->admin_panel();
 		}
 	}
+
+	if (Links::is_instructions_url())
+		Links::instructions_panel();
 }
 
 /**

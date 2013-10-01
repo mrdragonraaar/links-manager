@@ -36,6 +36,39 @@ table#categories td:first-of-type
 	width: 30px;
 }
 
+/* Admin: Instructions */
+div.instructions .isection
+{
+	padding-top: 0;
+	margin-bottom: 20px;
+}
+
+div.instructions .isection h4.title
+{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+div.instructions .isection p
+{
+	margin-bottom: 5px;
+}
+
+div.instructions .isection h4.subtitle
+{
+	font-weight: bold;
+	color: #444;
+}
+
+div.instructions .isection code
+{
+	display: block;
+	border: 1px solid #c8c8c8;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
 /* Validation */
 .invalid
 {

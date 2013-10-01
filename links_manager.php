@@ -2,7 +2,7 @@
 /*
 Plugin Name: Links Manager
 Description: Manage a collection of links and link categories
-Version: 2.0.1
+Version: 2.0.2
 Author: Adrian D. Elgar
 Author URI: http://mrdragonraaar.com
 */
@@ -25,7 +25,7 @@ i18n_merge(LM_PLUGIN_ID) || i18n_merge(LM_PLUGIN_ID, 'en_US');
 register_plugin(
 	LM_PLUGIN_ID,
 	i18n_r(LM_PLUGIN_ID . '/LM_TITLE'),
-	'2.0.1',
+	'2.0.2',
 	'Adrian D. Elgar',
 	'http://mrdragonraaar.com',
 	i18n_r(LM_PLUGIN_ID . '/LM_DESC'),
@@ -40,6 +40,8 @@ add_action('links-sidebar', 'createSideMenu',
    array(LM_PLUGIN_ID, i18n_r(LM_PLUGIN_ID . '/MANAGE_LINKS'), 'links'));
 add_action('links-sidebar', 'createSideMenu', 
    array(LM_PLUGIN_ID, i18n_r(LM_PLUGIN_ID . '/MANAGE_CATEGORIES'), 'categories'));
+add_action('links-sidebar', 'createSideMenu', 
+   array(LM_PLUGIN_ID, i18n_r(LM_PLUGIN_ID . '/INSTRUCTIONS'), 'instructions'));
 add_filter('content', 'lm_filter');
 
 // includes
@@ -47,15 +49,15 @@ require_once(LM_INC_PATH . 'functions.php');
 
 // javascript
 register_script('jquery-validate', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js', '1.10.0');
-register_script(LM_PLUGIN_ID, $SITEURL . 'plugins/' . LM_PLUGIN_ID . '/js/' . LM_PLUGIN_ID . '.js', '2.0.1', true);
+register_script(LM_PLUGIN_ID, $SITEURL . 'plugins/' . LM_PLUGIN_ID . '/js/' . LM_PLUGIN_ID . '.js', '2.0.2', true);
 queue_script('jquery-ui', GSBACK);
 queue_script('jquery-validate', GSBACK);
 //queue_script(LM_PLUGIN_ID, GSBACK);
 
 // stylesheet
-register_style(LM_PLUGIN_ID, $SITEURL . 'plugins/' . LM_PLUGIN_ID . '/css/' . LM_PLUGIN_ID . '.css', '2.0.1', 'screen');
+register_style(LM_PLUGIN_ID, $SITEURL . 'plugins/' . LM_PLUGIN_ID . '/css/' . LM_PLUGIN_ID . '.css', '2.0.2', 'screen');
 queue_style(LM_PLUGIN_ID, GSBACK);
-register_style(LM_PLUGIN_ID . '_links', $SITEURL . 'plugins/' . LM_PLUGIN_ID . '/css/' . LM_PLUGIN_ID . '_links.css', '2.0.1', 'screen');
+register_style(LM_PLUGIN_ID . '_links', $SITEURL . 'plugins/' . LM_PLUGIN_ID . '/css/' . LM_PLUGIN_ID . '_links.css', '2.0.2', 'screen');
 queue_style(LM_PLUGIN_ID . '_links', GSFRONT);
 
 ?>
