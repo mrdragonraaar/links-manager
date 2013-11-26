@@ -69,7 +69,7 @@ $i18n = array(
 	"INSTRUCTIONS_LINK_NAME" => "Show a single link by name",
 	"INSTRUCTIONS_LINK_NAME_DESC" => "The following will show a link named 'Fred'. This is a case-sensitive exact match.",
 	"INSTRUCTIONS_LINK_RANDOM" => "Show a random link",
-	"INSTRUCTIONS_LINK_RANDOM_DESC" => "The following will show a random link between minimum id 2 and maximum id 9. If only 1 id is used then it is assumed as a maximum with minimum 0.",
+	"INSTRUCTIONS_LINK_RANDOM_DESC" => "The following will show a random link between minimum id 2 and maximum id 9. If only 1 id is used then it is assumed as a maximum with minimum 0. If no id is used the minimum is 0 and maximum is current max id.",
 	"INSTRUCTIONS_LINKS_SEARCH" => "Search links by keyword",
 	"INSTRUCTIONS_LINKS_SEARCH_DESC" => "The following will show links with name or description containing 'fish'. This is a case-insensitive search.",
 );

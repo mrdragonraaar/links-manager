@@ -91,25 +91,66 @@ class Links extends LinksManager
 	}
 
 	/**
+	 * Get maximum link id.
+	 * @return max link id
+	 */
+	public function max_link_id()
+	{
+		return (count($this()) > 0) ? (count($this()) - 1) : 0;
+	}
+
+	/**
+	 * Check if minimum id is valid.
+	 * @return true if valid
+	 */
+	private function is_valid_min_link_id($min_id = null)
+	{
+		if (!isset($min_id) || !is_integer($min_id) ||
+		   ($min_id < 0))
+			return false;
+
+		return true;
+	}
+
+	/**
+	 * Check if maximum id is valid.
+	 * @return true if valid
+	 */
+	private function is_valid_max_link_id($max_id = null)
+	{
+		if (!isset($max_id) || !is_integer($max_id) ||
+		   ($max_id > $this->max_link_id()))
+			return false;
+
+		return true;
+	}
+
+	/**
 	 * Get random link.
 	 * @param $rand_min minimum value for id
 	 * @param $rand_max maximum value for id
 	 * @return random link
 	 */
-	public function get_rand_link($rand_min, $rand_max = null)
+	public function get_rand_link($rand_min = null, $rand_max = null)
 	{
-		if (!is_integer($rand_min) || ($rand_min < 0))
-			$rand_min = 0;
-
-		if (!isset($rand_max))
+		if (!$this->is_valid_min_link_id($rand_min))
 		{
-			$rand_max = $rand_min;
 			$rand_min = 0;
+			if (!$this->is_valid_max_link_id($rand_max))
+				$rand_max = $this->max_link_id();
+		}
+		else
+		{
+			if (!isset($rand_max))
+			{
+				$rand_max = $rand_min;
+				$rand_min = 0;
+			}
+
+			if (!$this->is_valid_max_link_id($rand_max))
+				$rand_max = $this->max_link_id();
 		}
 
-		if (!is_integer($rand_max) || ($rand_max >= count($this())))
-			$rand_max = (count($this()) > 0) ? count($this()) : 0;
-			
 		$id = rand($rand_min, $rand_max);
 		return $this($id);
 	}

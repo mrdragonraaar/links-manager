@@ -120,6 +120,12 @@ function lm_filter($content)
 		return return_link($name);
 	   }, $content);
 
+	/* (% randlink %) */
+	$content = preg_replace_callback('/\(%\s*randlink\s*%\)/',
+	   function($matches) {
+		return return_randlink();
+	   }, $content);
+
 	/* (% randlink:max %) */
 	$content = preg_replace_callback('/\(%\s*randlink:(\d+)\s*%\)/',
 	   function($matches) {
@@ -175,7 +181,7 @@ function return_link($id)
  * @param $rand_min minimum id
  * @param $rand_max maximum id
  */
-function get_randlink($rand_min, $rand_max = null)
+function get_randlink($rand_min = null, $rand_max = null)
 {
 	echo return_randlink($rand_min, $rand_max);
 }
@@ -186,7 +192,7 @@ function get_randlink($rand_min, $rand_max = null)
  * @param $rand_max maximum id
  * @return link html
  */
-function return_randlink($rand_min, $rand_max = null)
+function return_randlink($rand_min = null, $rand_max = null)
 {
 	global $lm_links;
 	$link = $lm_links->get_rand_link($rand_min, $rand_max);
