@@ -39,6 +39,7 @@ $i18n = array(
 	"SHOW_DESC" => "Show Description",
 	"YES" => "Yes",
 	"NO" => "No",
+	"BROWSE_IMAGES" => "Browse Images",
 	"VIEW_LINK" => "View Link",
 	"VIEW_PAGE" => "View Page",
 	"NO_LINK" => "No Link",

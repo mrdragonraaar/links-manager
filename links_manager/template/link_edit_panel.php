@@ -80,8 +80,11 @@ $link = isset($id) ? $this($id) : null;
 </p>
 <!-- END Category -->
 <!-- Icon URL -->
-<p>
+<p class="clearfix">
 <label for="link-icon"><?php i18n(LM_PLUGIN_ID . '/ICON_URL'); ?>:</label>
+<span class="edit-nav">
+<a id="link-browse-image" href="#"><?php i18n(LM_PLUGIN_ID . '/BROWSE_IMAGES'); ?></a>
+</span>
 <input class="text url" name="link-icon" id="link-icon" type="text" value="<?php if (isset($link)) { echo $link->icon; } ?>" />
 </p>
 <!-- END Icon URL -->

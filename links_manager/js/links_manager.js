@@ -60,3 +60,15 @@ $(document).ready(function() {
 	$("#link-page-slug").change(function() { urlEnableDisable() });
 });
 
+// browse images
+$(document).ready(function() {
+	function popUpImageBrowser(id, w, h)
+	{
+		var left = (screen.width/2) - (w/2);
+		var top = (screen.height/2) - (h/2);
+		return window.open('/admin/filebrowser.php?type=images&CKEditorFuncNum=0&returnid='+id, 'Image Browser', 'width='+w+',height='+h+',top='+top+',left='+left+',location=no,scrollbars=yes');
+	}
+
+	$('#link-browse-image').click(function() { popUpImageBrowser('link-icon', 730, 500); return false; });
+});
+
